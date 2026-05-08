@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>My Dashboard</title>
-    <style>
-        body { background: #f0f2f5; font-family: sans-serif; padding: 40px; }
-        .container { max-width: 600px; margin: 0 auto; }
-        .search-box { width: 100%; padding: 15px; border-radius: 30px; border: 1px solid #ddd; margin-bottom: 30px; font-size: 16px; box-sizing: border-box; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-        .link-card { background: white; padding: 20px; border-radius: 12px; text-decoration: none; color: #333; text-align: center; font-weight: bold; transition: 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .link-card:hover { transform: translateY(-5px); background: #007aff; color: white; }
-    </style>
+  <meta charset="UTF-8">
+  <title>고등학교 시간표 조회</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <form action="https://www.google.com/search" method="GET">
-            <input type="text" name="q" class="search-box" placeholder="Google 검색...">
-        </form>
-        <div class="grid">
-            <a href="https://github.com" class="link-card">GitHub</a>
-            <a href="https://youtube.com" class="link-card">YouTube</a>
-            <a href="https://discord.com" class="link-card">Discord</a>
-            <a href="#" class="link-card">School Portal</a>
-        </div>
-    </div>
+
+<h1>고등학교 시간표 조회</h1>
+
+<select id="region">
+  <option value="B10">서울</option>
+  <option value="C10">부산</option>
+  <option value="D10">대구</option>
+  <option value="E10">인천</option>
+  <option value="F10">광주</option>
+  <option value="G10">대전</option>
+  <option value="H10">울산</option>
+  <option value="I10">세종</option>
+  <option value="J10">경기</option>
+  <option value="K10">강원</option>
+  <option value="M10">충북</option>
+  <option value="N10">충남</option>
+  <option value="P10">전북</option>
+  <option value="Q10">전남</option>
+  <option value="R10">경북</option>
+  <option value="S10">경남</option>
+  <option value="T10">제주</option>
+</select>
+
+<input type="text" id="schoolName" placeholder="학교명 입력">
+
+<button onclick="searchSchool()">학교 검색</button>
+
+<select id="schoolSelect"></select>
+
+<br><br>
+
+<input type="number" id="grade" placeholder="학년">
+<input type="number" id="classNm" placeholder="반">
+
+<input type="date" id="date">
+
+<button onclick="loadTimetable()">조회</button>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
