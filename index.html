@@ -2,20 +2,38 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>나의 첫 깃허브 페이지</title>
+    <title>Developer Profile</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f9; }
-        .card { background: white; width: 300px; margin: 0 auto; padding: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        p { color: #666; }
-        .link { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #24292e; color: white; text-decoration: none; border-radius: 5px; }
+        :root { --main-color: #00ffcc; --bg-color: #0d1117; }
+        body { background: var(--bg-color); color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .profile-card { background: #161b22; border: 2px solid var(--main-color); border-radius: 20px; padding: 30px; width: 350px; text-align: center; box-shadow: 0 0 20px var(--main-color); }
+        .avatar { width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--main-color); margin-bottom: 15px; }
+        h1 { margin: 10px 0; font-size: 24px; color: var(--main-color); }
+        .tag { font-size: 14px; color: #8b949e; margin-bottom: 20px; display: block; }
+        .stat-row { margin: 15px 0; text-align: left; }
+        .label { font-size: 12px; margin-bottom: 5px; display: block; }
+        .bar-bg { background: #30363d; height: 10px; border-radius: 5px; overflow: hidden; }
+        .bar-fill { background: var(--main-color); height: 100%; transition: width 1s ease-in-out; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Hello, World! 🚀</h1>
-        <p>깃허브 페이지로 만든<br>나의 첫 번째 웹사이트입니다.</p>
-        <a href="https://github.com/wlsgksqls" class="link">내 깃허브 구경하기</a>
+    <div class="profile-card">
+        <img src="https://github.com/wlsgksqls.png" class="avatar">
+        <h1>Wlsgksqls</h1>
+        <span class="tag">Lv.99 App Developer</span>
+        
+        <div class="stat-row">
+            <span class="label">PYTHON (Coding)</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+        </div>
+        <div class="stat-row">
+            <span class="label">NETWORK & SECURITY</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 70%;"></div></div>
+        </div>
+        <div class="stat-row">
+            <span class="label">GAMING (TFT/HSR)</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+        </div>
     </div>
 </body>
 </html>
