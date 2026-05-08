@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
